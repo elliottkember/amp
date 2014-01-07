@@ -23,11 +23,11 @@ module Amp
 
     def parse_for_current_parent(class_to_be_added)
       maximum_number_of_levels = @full_filename.split(File::SEPARATOR).length - 2
+      regex = Regexes.current_parent_regex(maximum_number_of_levels)
       
-      if maximum_number_of_levels >= 0
-        regex = Regexes.current_parent_regex(maximum_number_of_levels)
-        @text = add_class_with_regex(regex, class_to_be_added)
-      end
+      return @text if maximum_number_of_levels < 0 and @filename == 'index.html'
+      
+      @text = add_class_with_regex(regex, class_to_be_added)
       
       return @text
     end
@@ -42,7 +42,7 @@ module Amp
     end
 
     # Parse a single match. Extracted form the add_class_with_regex() method.
-    # This code is a little hairy and is unchanged from the original implementation!
+    # This code is a little hairy and is unchanged from the original implementation
     def parse_match(text, match_index, matches, class_to_be_added)
 
       chars = text.chars.to_a

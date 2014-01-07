@@ -87,6 +87,10 @@ class AmpTest < Test::Unit::TestCase
     should "add current-parent class to an index.html file in the same folder" do
       test "<a href='index.html'></a>", "<a class='current-parent' href='index.html'></a>", "blog/show.html"
     end
+
+    should "add current-parent class to an index.html file that's in the same folder (if we're not actually in a folder)" do
+      test "hi <a href='index.html'>there</a>", "hi <a class='current-parent' href='index.html'>there</a>", "show.html"
+    end
     
     should "add current-parent classes" do
       test "<a href='../index.html'></a>", "<a class='current-parent' href='../index.html'></a>", "blog/about/show.html"

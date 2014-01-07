@@ -5,6 +5,10 @@
       end
 
       def self.current_parent_regex(maximum_number_of_levels)
-        /href=["'](..\/){0,#{maximum_number_of_levels}}index.html["']/m
+        if maximum_number_of_levels > 0
+          /href=["'](..\/){0,#{maximum_number_of_levels}}index.html["']/m
+        else
+          /href=["']index.html["']/m
+        end
       end
     end
