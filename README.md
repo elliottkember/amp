@@ -13,7 +13,7 @@ Say you're in index.html. You have this link:
 
     <a href='index.html'>Home</a>
 
-But you want it to say
+But, because it links to the *current page*, you want it to say
 
     <a class='current' href='index.html'>Home</a>
 
