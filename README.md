@@ -19,7 +19,7 @@ But, because it links to the *current page*, you want it to say
 
 Bingo! You can now have HTML menus that automatically have the right class.
 
-Better yet, Amp also adds a "current" class to the parent <li> if there is one.
+Better yet, Amp also adds a "current" class to the parent li if there is one.
 
     <li class='current'><a class='current' href='index.html'>Home</a></li>
 
