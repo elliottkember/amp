@@ -77,9 +77,9 @@ class AmpTest < Test::Unit::TestCase
     
     
       
-      # Test that blog/show.html adds a parent class to blog/index.html
+  # Test that blog/show.html adds a parent class to blog/index.html
       
-      # Root example
+  # Root example
     should "not add current-parent classes to the root document" do
       test "<a href='../index.html'></a>", "<a href='../index.html'></a>", "blog/show.html"
     end
