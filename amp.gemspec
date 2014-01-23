@@ -22,7 +22,6 @@ AMP_GEMSPEC = Gem::Specification.new do |spec|
   spec.add_development_dependency 'shoulda'
   spec.add_development_dependency 'test-unit'
   spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'byebug'
 
   spec.files        = `git ls-files`.split($/)
   spec.test_files   = spec.files.grep(%r{^spec/})

@@ -2,7 +2,6 @@ require "amp"
 require "test_helper"
 require "test/unit"
 require "shoulda"
-require "byebug"
 
 def test(input, expected_output, filename="index.html")
   input = input.strip
