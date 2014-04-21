@@ -6,7 +6,7 @@ module Amp
                    current_class="current", 
                    current_parent_class="current-parent")
 
-    parser = Parser.new ({
+    parser = Parser.new({
       :text => text,
       :filename => full_filename,
       :current_class => current_class, 
